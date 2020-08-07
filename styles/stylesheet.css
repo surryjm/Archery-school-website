@@ -3,8 +3,8 @@
 }
 
 body {
-  font-size: 16px;
-  font-family: Arial, sans-serif;
+  font-size: 17px;
+  font-family: "Arial Regular", sans-serif;
 }
 
 .container {
@@ -22,8 +22,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
+
 }
 
 .main-header {
@@ -43,21 +42,24 @@ body {
   background-image: url("../images/footer-image.jpg");
   background-size: cover;
   color: #ffffff;
+  font-size: 14px;
 }
 
 .nav {
   display: flex;
   flex-direction: row;
   text-decoration: none;
+  margin-right: 70px;
+  margin-top: 35px;
 }
 
 .site-logo {
-  width: 150px;
-  height: auto;
-  margin-left: 40px;
+  margin-left: 70px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.nav-links {
+.nav-footer-links {
   list-style-type: none;
 }
 
@@ -65,11 +67,35 @@ a {
   text-decoration: none;
 }
 
-.nav-link-color {
+.nav-footer-link-color {
   color: #ffffff;
 }
 
+.footer-links li + li:before,
 nav li + li:before {
   content: "/";
   margin: 0 10px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+}
+
+ul {
+  padding-inline-start: 0px;
+}
+
+address {
+  font-style: normal;
+}
+
+.footer-image-text-container {
+  padding-top: 50px;
+  padding-left: 70px;
+  padding-bottom: 50px;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
 }
