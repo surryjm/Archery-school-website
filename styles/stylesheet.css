@@ -8,6 +8,7 @@ body {
   font-size: 17px;
   font-family: "Arial Regular", sans-serif;
   line-height: 1.6;
+  color: #444444;
 }
 
 .container {
@@ -52,14 +53,19 @@ body {
 .private-lessons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
   grid-column-gap: 2rem;
+}
+
+.classes-header,
+.private-lessons-header {
+  grid-area: 1 / 1 / 2 / 4;
 }
 
 .classes > article,
 .private-lessons > article {
   padding: 2rem;
   box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.15);
-
 }
 
 .classes > article:hover,
@@ -67,7 +73,6 @@ body {
   box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.3s ease-in-out;
 }
-
 
 .private-lessons-header {
   margin-top: 4rem;
@@ -131,7 +136,7 @@ nav li + li:before {
 }
 
 ul {
-  padding-inline-start: 0px;
+  padding: 0px;
 }
 
 address {
@@ -185,10 +190,45 @@ h3 {
 
 .main-header {
   text-align: center;
+  margin-bottom: 10px;
 }
 
 
-/********************ABOUT********************/
+/********************INSTRUCTORS*********************/
+
+.instructors {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+}
+
+.instructors-article {
+  display: flex;
+  flex-direction: column;
+  color: #03a3df;
+  width: 20vw;
+  margin-left: 5vw;
+  border-top: 4mm solid #03a3df;
+}
+
+.instructor-name {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 1.7rem;
+}
+
+.instructor-description {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #03a3df;
+}
+
+.instructor-image {
+  margin-top: 2rem;
+}
+
+
+/********************ABOUT*********************/
 
 .about-video-container {
   display: grid;
@@ -196,8 +236,10 @@ h3 {
   grid-column-gap: 50px;
 }
 
-iframe {
+.video-1,
+.video-2 {
   margin-top: 1.5rem;
+  border: none;
 }
 
 .nondiscriminatory-policy {
@@ -206,4 +248,24 @@ iframe {
 
 .video-2 {
   margin-left: 11px;
+}
+
+/*********************CONTACT******************/
+
+.map-and-address {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 50px;
+}
+
+.map {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.contact-address {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.contact-address-link {
+  color: #444444;
 }
