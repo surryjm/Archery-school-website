@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+.hidden {
+  position: relative;
+  left: -10000px;
+  top: auto;
+  color: #444444;
+}
+
+.hidden:focus {
+  left: 0;
+}
+
 body {
   font-size: 17px;
   font-family: "Arial Regular", sans-serif;
@@ -20,7 +31,8 @@ body {
 
 .header {
   grid-area: 1 / 1 / 2 / 2;
-  background-color: #03a3df;
+  /*background-color: #03a3df;*/
+  background-color: #036081;
   color: #ffffff;
   display: flex;
   flex-direction: row;
@@ -80,7 +92,13 @@ body {
 
 .footer {
   grid-area: 5 / 1 / 6 / 2;
-  background-image: url("../images/footer-image.jpg");
+  /*background-image: url("../images/footer-image.jpg");*/
+  background:
+  linear-gradient(
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1)
+    ),
+    url("../images/footer-image.jpg");
   background-size: cover;
   color: #ffffff;
   font-size: 14px;
@@ -127,6 +145,8 @@ a:hover {
 nav li + li:before {
   content: " / ";
   margin: 0 10px;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .footer-links {
@@ -205,10 +225,10 @@ h3 {
 .instructors-article {
   display: flex;
   flex-direction: column;
-  color: #03a3df;
+  color: #036081;
   width: 20vw;
   margin-left: 5vw;
-  border-top: 4mm solid #03a3df;
+  border-top: 4mm solid #036081;
 }
 
 .instructor-name {
